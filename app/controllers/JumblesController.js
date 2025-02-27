@@ -16,6 +16,20 @@ export class JumblesController {
     jumblesListElem.innerHTML = jumblesContent
   }
 
+  drawJumbleDescription(jumbleId) {
+    const jumbles = AppState.jumbles
+    let descriptionContent = ''
+
+    const jumbleDescription = jumbles.find(jumble => jumble.id == jumbleId)
+
+    descriptionContent += jumbleDescription.difficulty
+    descriptionContent += jumbleDescription.body
+    const jumbleDescriptionElem = document.getElementById('jumbleDescription')
+
+    jumbleDescriptionElem.innerHTML = descriptionContent
+
+  }
+
   setActiveJumble(activeJumbleId) {
     jumblesService.setActiveJumble(activeJumbleId)
   }

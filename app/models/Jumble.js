@@ -20,11 +20,17 @@ export class Jumble {
   get listTemplate() {
     return `
   <div class="d-flex justify-content-around">
-    <button onclick="app.jumblesController.setActiveJumble('${this.id}')" class="btn btn-warning text-light me-3 mb-2" type="button">Start</button><span>${this.difficulty}</span><span>34</span><span>55</span>
+    <button onclick="app.jumblesController.setActiveJumble('${this.id}'), app.jumblesController.drawJumbleDescription('${this.id}')" class="btn btn-warning text-light me-3 mb-2" type="button">Start</button><span>${this.difficulty}</span><span>34</span><span>55</span>
   </div>
   `
   }
 
+  get jumbleDescriptionTemplate() {
+    return `
+  <h2>${this.difficulty}</h2>
+              <p>${this.body}</p>
+  `
+  }
 
 
 
