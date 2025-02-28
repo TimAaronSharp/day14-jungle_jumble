@@ -6,7 +6,13 @@ export class JumblesController {
     this.drawJumbles()
   }
 
+  // saveCustomJumble(){
+  //   event.preventDefault()
 
+  //   const formElem = event.target
+
+  //   formElem.content.value
+  // }
 
   drawJumbles() {
     const jumbles = AppState.jumbles

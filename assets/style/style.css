@@ -10,6 +10,19 @@ main {
 
 }
 
+select {
+  display: block;
+}
+
+.create-form {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.select-padding {
+  padding-left: 5px;
+}
+
 #pop-toast-container {
   display: flex;
   flex-direction: column;
@@ -19,4 +32,6 @@ main {
 
 #jumbleTextArea {
   width: 100%;
+  min-height: 40dvh;
+  max-height: 60dvh;
 }

@@ -36,7 +36,7 @@
             <div id="jumbleBody" class="card-title p-3">
 
             </div>
-            <form>
+            <form class="p-3">
               <label for="jumbleTextArea"></label>
               <textarea name="content" id="jumbleTextArea"></textarea>
             </form>
@@ -51,7 +51,26 @@
             <!-- <div class="d-flex justify-content-around">
             <button class="btn btn-warning text-light me-3" type="button">Start</button><span>Easy Jumble</span><span>34</span><span>55</span>
              </div> -->
-
+          </div>
+          <div>
+            <form class="create-form">
+              <div class="d-flex justify-content-center">
+                <p>Create Jumble</p>
+              </div>
+              <label for="newJumbleName"></label>
+              <input id="newJumbleName" name="jumbleName" type="text" placeholder="Jumble Name" required>
+              <div class="select-padding">
+                <label for="newJumbleDifficulty">Difficulty</label>
+                <select id="newJumbleDifficulty" name="jumbleDifficulty" aria-placeholder="Set Difficulty" required>
+                  <option disabled selected value="">Set Difficulty</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Crazy">Crazy</option>
+                </select>
+              </div>
+              <label for="newJumbleBody"></label>
+              <textarea id="newJumbleBody" name="jumbleBody" type="text" placeholder="Jumble Body" required></textarea>
+            </form>
           </div>
         </div>
       </div>
