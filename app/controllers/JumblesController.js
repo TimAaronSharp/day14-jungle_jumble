@@ -16,21 +16,39 @@ export class JumblesController {
     jumblesListElem.innerHTML = jumblesContent
   }
 
-  drawJumbleDescription(jumbleId) {
-    const jumbles = AppState.jumbles
-    let descriptionContent = ''
+  drawJumbleDescription() {
 
-    const jumbleDescription = jumbles.find(jumble => jumble.id == jumbleId)
+    const activeJumble = AppState.activeJumble
+    const activeJumbleDifficulty = activeJumble.difficulty
+    const activeJumbleBody = activeJumble.body
 
-    descriptionContent += jumbleDescription.difficulty
-    descriptionContent += jumbleDescription.body
-    const jumbleDescriptionElem = document.getElementById('jumbleDescription')
+    const jumbleDifficultyElem = document.getElementById('jumbleDifficulty')
+    const jumbleBodyElem = document.getElementById('jumbleBody')
 
-    jumbleDescriptionElem.innerHTML = descriptionContent
-
+    jumbleDifficultyElem.innerHTML = activeJumbleDifficulty
+    jumbleBodyElem.innerHTML = activeJumbleBody
   }
 
   setActiveJumble(activeJumbleId) {
     jumblesService.setActiveJumble(activeJumbleId)
   }
 }
+
+
+// const jumbles = AppState.jumbles
+// let jumbleDifficultyContent = ''
+// let jumbleBodyContent = ''
+
+// const jumbleDescription = jumbles.find(jumble => jumble.id == jumbleId)
+
+// jumbleDifficultyContent += jumbleDescription.difficulty
+// jumbleBodyContent += jumbleDescription.body
+
+// const jumbleDifficultyElem = document.getElementById('jumbleDifficulty')
+// jumbleDifficultyElem.innerHTML = jumbleDifficultyContent
+// console.log(`Jumble Difficulty is ${jumbleDescription.difficulty}`);
+
+
+// const jumbleBodyElem = document.getElementById('jumbleBody')
+// jumbleBodyElem.innerHTML = jumbleBodyContent
+// console.log(`Jumble Body is ${jumbleDescription.body}`);
